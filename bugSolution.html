@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Correct approach: Using textContent and string concatenation or direct replacement
+    let divElement = document.getElementById("myDiv");
+    divElement.textContent = 123; //Setting textContent to the number 123
+    divElement.textContent += "This text should also be visible."; //Append the string
+    //Alternative approach using innerHTML, ensuring a string is present before concatenation
+    //document.getElementById("myDiv").innerHTML = "123" + "This text should also be visible.";
+  </script>
+</body>
+</html>
